@@ -1,11 +1,9 @@
 public class Unicode {
     public static void main(String[] args) {
-
-        char ca = '\u9398';
+        char uc = '\u9398';
         for (int j = 0; j < 780; j++) {
-            String sc = String.valueOf(ca);
-            System.out.print(sc);
-            ca++;
+            System.out.print(uc);
+            uc++;
         }
     }
 }
