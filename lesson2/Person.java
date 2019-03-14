@@ -5,17 +5,27 @@ public class Person {
     int weight = 180;
     int age = 34;
 
-    String toTalk() {
-        String meet = "Hi";
-        return meet;
-    }
-
-    boolean toWalk() {
+    boolean Walk() {
         boolean walking = true;
         return walking;
     }
 
-    public void walkDistance(int rasstoyanie) {
+    boolean sit() {
+        boolean maysit = true;
+        return maysit;
+    }
+
+    public void run(int rasstoyanie) {
         rasstoyanie = 100;
+    }
+
+    String talk() {
+        String meet = "Hi";
+        return meet;
+    }
+
+    boolean learnJava() {
+        boolean jlearn = true;
+        return jlearn;
     }
 }

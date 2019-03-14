@@ -5,8 +5,12 @@ public class Wolf {
     int weight = 10;
     int ages = 5;
 
-    boolean eat() {
-        System.out.println("Pluffy loves to eat");
+    int walking() {
+        int walk = 10;
+        return walk;
+    }
+
+    boolean sit() {
         return true;
     }
 
@@ -15,7 +19,12 @@ public class Wolf {
         return runs;
     }
 
-    String bark() {
-        return "woof-woof!";
+    String hawl() {
+        return "woooo!";
+    }
+
+    boolean hunt() {
+        System.out.println("Pluffy loves hunting");
+        return true;
     }
 }
