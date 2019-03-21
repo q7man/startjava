@@ -4,21 +4,26 @@ public class Jaeger {
     private int height;
     private int speed;
 
-    public Jaeger(boolean status, int speed) {
-        this.status = status;
-        this.speed = speed;
+    public int getSpeed(int modelSpeed){
+        speed = modelSpeed;
+        return speed;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public boolean getStatus(boolean statusmodel){
+        status = statusmodel;
+        return status;
+    }
+
+    public void setModel(String modelName) {
+        model = modelName;
     }
 
     public void setHeight(int height) {
         this.height = height;
     }
 
-    void messageAbout() {
-        System.out.println("Модель " + model + " ,высота модели " + height + " метров.");
-        System.out.println("Статус, уничтожена: " + status + ", скорость: " + speed);
+    public void setReportData() {
+        System.out.println("Модель: " + model + ". высота модели " + height + " метров.");
+        System.out.println("Статус: уничтожена. " + status + ". скорость: " + speed);
     }
 }
