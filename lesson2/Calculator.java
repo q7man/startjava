@@ -1,14 +1,9 @@
-import java.util.Scanner;
-
 public class Calculator {
     public int firstNumber;
     public int secondNumber;
     public String matOperation;
 
-    public String getMatPerfomance() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Math symbol: ");
-               matOperation = scanner.nextLine();
+    public void Calculate() {
         switch (matOperation) {
             case "+":
                 System.out.println("Plus: " + firstNumber + "+" + secondNumber + " = " + (firstNumber + secondNumber));
@@ -30,16 +25,14 @@ public class Calculator {
                     count++;
                 }
                 System.out.println("Grade number: " + firstNumber + "^" + secondNumber + " = " + (degree));
-            }
-            break;
-
+                }
+                break;
             case "%":
                 System.out.println("Modulo: " + firstNumber + "%" + secondNumber + " = " + (firstNumber % secondNumber));
                 break;
             default:
                 System.out.println("Uncorret Math Symbol");
         }
-        return "";
     }
 }
 

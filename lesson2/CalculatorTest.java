@@ -10,7 +10,9 @@ public class CalculatorTest {
             calc.firstNumber = scanner.nextInt();
             System.out.print("Enter second number ");
             calc.secondNumber = scanner.nextInt();
-            calc.getMatPerfomance();
+            System.out.print("Enter Math symbol: ");
+            calc.matOperation = scanner.next();
+            calc.Calculate();
             do {
                 System.out.println("Wish to continue: yes/no");
                 continueChoose = scanner.next();
