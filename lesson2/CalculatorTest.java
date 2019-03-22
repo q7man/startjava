@@ -1,23 +1,28 @@
 import java.util.Scanner;
+
 public class CalculatorTest {
     public static void main(String[] args) {
-        int continueChoose = 0;
         Scanner scanner = new Scanner(System.in);
+        String continueChoose;
         Calculator calc = new Calculator();
-        while (continueChoose == 1 || continueChoose == 0) {
-            System.out.print("Введите первое число: ");
-             calc.firstNumber = scanner.nextInt();
-            System.out.print("Введите второе число: ");
-             calc.secondNumber = scanner.nextInt();
-            System.out.print("Введите знак математической операции: ");
-             calc.getMatPerfomance();
-            System.out.println("Если вы хотите продолжить: 1) да 2) нет");
-             continueChoose = scanner.nextInt();
-        }
-        if (continueChoose == 2) {
-            System.out.println("exit");
-        } else {
-            continueChoose++;
-        }
+        do {
+            System.out.print("Enter first number: ");
+            calc.firstNumber = scanner.nextInt();
+            System.out.print("Enter second number ");
+            calc.secondNumber = scanner.nextInt();
+            calc.getMatPerfomance();
+            do {
+                System.out.println("Wish to continue: yes/no");
+                continueChoose = scanner.next();
+                if (continueChoose.equals("yes")) {
+                    System.out.println("Continue");
+                } else if (continueChoose.equals("no")) {
+                    System.out.println("Exit");
+                    break;
+                } else {
+                    System.out.println("Uncorrted answer");
+                }
+            } while (!continueChoose.equals("yes"));
+        } while (!continueChoose.equals("no"));
     }
 }

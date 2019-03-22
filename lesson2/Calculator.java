@@ -1,12 +1,14 @@
 import java.util.Scanner;
+
 public class Calculator {
-    public int firstNumber = 0;
-    public int secondNumber = 0;
+    public int firstNumber;
+    public int secondNumber;
     public String matOperation;
 
-public String getMatPerfomance() {
+    public String getMatPerfomance() {
         Scanner scanner = new Scanner(System.in);
-        matOperation = scanner.nextLine();
+        System.out.print("Enter Math symbol: ");
+               matOperation = scanner.nextLine();
         switch (matOperation) {
             case "+":
                 System.out.println("Plus: " + firstNumber + "+" + secondNumber + " = " + (firstNumber + secondNumber));
@@ -27,16 +29,17 @@ public String getMatPerfomance() {
                     degree = degree * firstNumber;
                     count++;
                 }
-                System.out.println("Grade number: " + firstNumber + "^" + secondNumber + " = " + (Math.pow(firstNumber, secondNumber)));
+                System.out.println("Grade number: " + firstNumber + "^" + secondNumber + " = " + (degree));
             }
             break;
+
             case "%":
                 System.out.println("Modulo: " + firstNumber + "%" + secondNumber + " = " + (firstNumber % secondNumber));
                 break;
             default:
-                System.out.println("Не правильный символ математической операции!");
+                System.out.println("Uncorret Math Symbol");
         }
-        return matOperation;
+        return "";
     }
 }
 
