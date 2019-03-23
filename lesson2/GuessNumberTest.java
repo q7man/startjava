@@ -11,7 +11,7 @@ public class GuessNumberTest {
         GuessNumber guessNum = new GuessNumber(playerOne, playerTwo);
 
         do {
-            guessNum.Guess();
+            guessNum.guess();
             do {
                 System.out.println("Wish to continue: yes/no");
                 continueChoose = scanner.next();

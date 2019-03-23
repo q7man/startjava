@@ -11,19 +11,18 @@ public class GuessNumber {
         this.playerTwo = playerTwo;
     }
 
-    public void Guess() {
-        Player gamePlayers = new Player();
-        guessnumber = (int) (Math.random() * 10 + 1);
-        System.out.print(playerOne + " enter your number: ");
-        gamePlayers.setScoreone(scanner.nextInt());
-        if (gamePlayers.playerNumber == guessnumber) {
-            System.out.println(playerOne + " number is right! ");
+    public void guess() {
+        guessnumber = (int) (Math.random() * 10);
+        System.out.print(playerOne.name + " enter your number: ");
+        playerOne.setScoreone(scanner.nextInt());
+        if (playerOne.number == guessnumber) {
+            System.out.println(playerOne.name + " number is right! ");
         }
-        System.out.print(playerTwo + " enter your number: ");
-        gamePlayers.setScoreone(scanner.nextInt());
-        if (gamePlayers.playerNumber == guessnumber) {
-            System.out.println(playerTwo + " number is right! ");
+        System.out.print(playerTwo.name + " enter your number: ");
+        playerTwo.setScoreone(scanner.nextInt());
+        if (playerTwo.number == guessnumber) {
+            System.out.println(playerTwo.name + " number is right! ");
         }
-        System.out.println("The Guess Number was: " + this.guessnumber);
+        System.out.println("The Guess Number was: " + guessnumber);
     }
 }
