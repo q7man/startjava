@@ -1,36 +1,29 @@
 import java.util.Scanner;
-public class GuessNumber {
-    int number;
-    int logic;
 
-    public GuessNumber(int number) {
-        Player ww = new Player((int) (Math.random() * 10), (int) (Math.random() * 10));
-        this.number = (int) (Math.random() * 10);
-        System.out.println(ww.Playerone + " думает, что это " + ww.score + ". Загадано было " + this.number);
-        System.out.println(ww.Playertwo + " думает, что это " + ww.scoretwo + ". Загадано было " + this.number);
-        if (ww.score == this.number) {
-            System.out.println(ww.Playerone + " отгадал. Это число: " + this.number);
-        }
-        if (ww.scoretwo == this.number) {
-            System.out.println(ww.Playertwo + " отгадал. Это число: " + this.number);
-        }
+public class GuessNumber {
+    Scanner scanner = new Scanner(System.in);
+    private Player playerOne;                   //переназначение? объявляем 2 объекта/переменные? в род. классе с именем класса Player и вызываем в main ввод
+    private Player playerTwo;                   // не считывает строку =\
+    public int guessnumber;
+
+    public GuessNumber(Player playerOne, Player playerTwo) {
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
     }
 
-    String endGame() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Если вы хотите продолжить: 1) да 2) нет");
-        logic = scanner.nextInt();
-        while (logic == 1) {
-            System.out.println("Отгадайте число от 0 до 10!");
-            System.out.println("Введите имя игрока:");
-            GuessNumber guss = new GuessNumber((int) (Math.random() * 10));
-            endGame();
+    public void Guess() {
+        Player gamePlayers = new Player();
+        guessnumber = (int) (Math.random() * 10 + 1);
+        System.out.print(playerOne + " enter your number: ");
+        gamePlayers.setScoreone(scanner.nextInt());
+        if (gamePlayers.playerNumber == guessnumber) {
+            System.out.println(playerOne + " number is right! ");
         }
-        if (logic == 2) {
-            System.out.println("Игра завершена");
-            return "";
-        } else {
-            return endGame();
+        System.out.print(playerTwo + " enter your number: ");
+        gamePlayers.setScoreone(scanner.nextInt());
+        if (gamePlayers.playerNumber == guessnumber) {
+            System.out.println(playerTwo + " number is right! ");
         }
+        System.out.println("The Guess Number was: " + this.guessnumber);
     }
 }

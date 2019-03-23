@@ -1,15 +1,20 @@
-import java.util.Scanner;
 public class Player {
-    Scanner scanner = new Scanner(System.in);
-    int score;
-    int scoretwo;
-    String Playerone = scanner.nextLine();
-    String Playertwo = scanner.nextLine();
+    public int playerNumber;
+    public String gamePlayer;
 
-    public Player(int score, int scoretwo) {
-        System.out.println("Введите ваши числа:");
-        Scanner scanner = new Scanner(System.in);
-        this.score = scanner.nextInt();
-        this.scoretwo = scanner.nextInt();
+    public String toString() {
+        return gamePlayer + " ";
+    }
+
+    public Player(String gamePlayer) {
+        this.gamePlayer = gamePlayer;
+    }
+
+    public Player() {
+        this.gamePlayer = gamePlayer;
+    }
+
+    public void setScoreone(int playerNumber) {
+        this.playerNumber = playerNumber;
     }
 }
