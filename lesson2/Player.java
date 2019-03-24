@@ -6,7 +6,7 @@ public class Player {
         this.name = name;
     }
 
-    public void setScoreone(int number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 }
