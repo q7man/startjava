@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class GuessNumber {
     Scanner scanner = new Scanner(System.in);
-    private Player playerOne;                   
-    private Player playerTwo;                   
+    private Player playerOne;
+    private Player playerTwo;
     public int guessnumber;
 
     public GuessNumber(Player playerOne, Player playerTwo) {

@@ -10,20 +10,21 @@ public class GuessNumberTest {
         Player playerTwo = new Player(scanner.next());
         GuessNumber guessNum = new GuessNumber(playerOne, playerTwo);
 
-        do {
+        while (true) {
             guessNum.guess();
-            do {
-                System.out.println("Wish to continue: yes/no");
-                continueChoose = scanner.next();
-                if (continueChoose.equals("yes")) {
-                    System.out.println("Continue");
-                } else if (continueChoose.equals("no")) {
-                    System.out.println("Exit");
-                    break;
-                } else {
-                    System.out.println("Uncorrted answer");
-                }
-            } while (!continueChoose.equals("yes"));
-        } while (!continueChoose.equals("no"));
+            if (playerOne.number == guessNum.guessnumber || playerTwo.number == guessNum.guessnumber)
+                do {
+                    System.out.println("Wish to continue: yes/no");
+                    continueChoose = scanner.next();
+                    if (continueChoose.equals("yes")) {
+                        System.out.println("Continue");
+                    } else if (continueChoose.equals("no")) {
+                        System.out.println("Exit");
+                        break;
+                    } else {
+                        System.out.println("Uncorrted answer");
+                    }
+            } while (continueChoose == "yes");
+        }
     }
 }
