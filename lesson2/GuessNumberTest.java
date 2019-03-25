@@ -9,8 +9,9 @@ public class GuessNumberTest {
         Player playerOne = new Player(scanner.next());
         Player playerTwo = new Player(scanner.next());
         GuessNumber guessNum = new GuessNumber(playerOne, playerTwo);
+        boolean variable;
 
-        while (true) {
+        while (variable = true) {
             guessNum.guess();
             if (playerOne.number == guessNum.guessnumber || playerTwo.number == guessNum.guessnumber)
                 do {
@@ -20,7 +21,8 @@ public class GuessNumberTest {
                         System.out.println("Continue");
                     } else if (continueChoose.equals("no")) {
                         System.out.println("Exit");
-                        break;
+                        variable = false;
+                        return;
                     } else {
                         System.out.println("Uncorrted answer");
                     }
